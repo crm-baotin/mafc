@@ -27,7 +27,11 @@ DEBUG = False
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['mafc.onrender.com']
+ALLOWED_HOSTS = [
+    "mafc.onrender.com",
+    "taichinhhanoi.io.vn",
+    "www.taichinhhanoi.io.vn"
+]
 
 
 
