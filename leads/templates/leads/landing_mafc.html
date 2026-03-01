@@ -26,7 +26,7 @@ src="https://www.facebook.com/tr?id=1969974450230357&ev=PageView&noscript=1"/>
 <!-- ===== OPEN GRAPH (PREVIEW KHI DÁN LINK) ===== -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Giải pháp tài chính tiêu dùng – TCHN">
-<meta property="og:description" content="Hỗ trợ vay tín chấp 10 triệu - 500 triệu. Hỗ trợ xử lý hồ sơ trực tiếp tại Hà Nội.">
+<meta property="og:description" content="Vay tín chấp 10 - 500 triệu. Gặp trực tiếp chuyên viên tại Hà Nội.">
 <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'img/mafc/og-preview.jpg' %}">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
 
@@ -125,6 +125,17 @@ img{max-width:100%;display:block}
   display:inline-block;
 }
 
+.info-text{
+  line-height:1.6;
+  font-size:15px;
+  margin-bottom:18px;   /* khoảng cách trước CTA */
+}
+
+.cta-line{
+  color:#0033A0;   /* xanh SHB */
+  font-weight:600;
+  font-size:15px;
+}
 /* HERO LINES */
 .hero-lines{
   max-width:520px;
@@ -327,10 +338,14 @@ product-title{
       <span class="line-3">Hỗ trợ vay & thẻ tín dụng</span>
     </h1>
 
-    <p>
-      Xử lý hồ sơ,tư vấn trực tiếp – KHÔNG MẤT PHÍ<br>
-      Hỗ trợ "nợ xấu" với khách hàng có hộ khẩu, sinh sống tại nội thành Hà Nội<br>
-      Hỗ trợ khách hàng từ 20 – 60 tuổi, có CCCD gắn chip<br>
+    <p class="info-text">
+      <strong>Xử lý hồ sơ, tư vấn trực tiếp – KHÔNG MẤT PHÍ</strong><br>
+
+      <em>Hỗ trợ "NỢ XẤU" với khách hàng có hộ khẩu, sinh sống tại nội thành Hà Nội</em><br>
+      <em>Khách hàng từ 20 – 60 tuổi, có CCCD gắn chip</em>
+    </p>
+
+    <p class="cta-line">
       Đăng ký để được sắp xếp lên hồ sơ với chuyên viên gần bạn nhất.
     </p>
   </div>
