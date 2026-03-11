@@ -455,60 +455,8 @@ product-title{
     <img src="{% static 'img/mafc/hero/hero_main.png' %}">
   </div>
 </div>
-<!-- ===== THÔNG TIN SẢN PHẨM ===== -->
-<section class="product-info">
-  <div class="product-info-box">
-    <p class="product-title"><strong>Thông tin sản phẩm*:</strong></p>
 
-    <ul class="product-list">
-      <li>Gói vay từ <strong>20 – 100 triệu đồng</strong></li>
-      <li>Thời gian vay <strong>6 – 36 tháng</strong></li>
-      <li>Lãi suất phẳng (tham chiếu) <strong>35,4%/năm</strong></li>
-      <li>
-        Kết quả ước tính dựa trên lãi suất phẳng (tham chiếu)
-        <strong>16,44%/năm</strong>, có thể chênh lệch nhỏ so với thực tế
-      </li>
-    </ul>
-
-    <p class="product-example">
-      Ví dụ: Vay <strong>20.000.000đ</strong> trong <strong>18 tháng</strong>,
-      tổng số tiền thanh toán khoảng <strong>25.110.000đ</strong>
-      (đã bao gồm các loại phí, trừ phí bảo hiểm & phí chuyển tiền).
-    </p>
-
-    <p class="product-note">
-      TàiChínhHàNội không thu bất kỳ khoản phí nào cho đến khi khoản vay được giải ngân.
-    </p>
-
-    <p class="product-italic">
-      <em>
-        Quyết định phê duyệt thường trong vòng 1 giờ.
-        Với khoản vay lớn hơn, thời gian có thể lâu hơn nhưng thường hoàn tất
-        trong vòng 8 giờ làm việc.
-      </em>
-    </p>
-  </div>
-</section>
-<!-- ===== PARTNER SUPPORT ===== -->
-<section class="partner-support">
-  <div class="container">
-    <p class="partner-text">
-      Hỗ trợ hồ sơ tại hơn 10+ tổ chức tài chính lớn
-    </p>
-
-    <div class="partner-logos">
-      <img src="{% static 'img/partners/shbfinance.png' %}" alt="SHB Finance">
-      <img src="{% static 'img/partners/miraeasset.png' %}" alt="Mirae Asset Finance">
-      <img src="{% static 'img/partners/shinhanfinance.png' %}" alt="Shinhan Finance">
-    </div>
-
-    <p class="partner-note">
-      *Chúng tôi là chuyên viên hỗ trợ trực tiếp hoàn thiện và xử lý hồ sơ vay. 
-      Không phải là tổ chức tín dụng.
-    </p>
-  </div>
-</section>
-
+<!-- FORM -->
 <section class="gray" id="dangky">
   <div class="container">
     <div class="form-wrap">
@@ -538,9 +486,8 @@ product-title{
 
   <div class="form-group">
     <select name="location" required>
-  <option value="">Nơi sinh sống</option>
+  <option value="Hà Nội" selected>Hà Nội</option>
 
-  <option>Hà Nội</option>
   <option>TP. Hồ Chí Minh</option>
   <option>Đà Nẵng</option>
   <option>Hải Phòng</option>
@@ -607,15 +554,6 @@ product-title{
 </select>
   </div>
 
-  <div class="form-group">
-    <select name="job" required>
-      <option value="">Nghề nghiệp hiện tại</option>
-      <option value="Lao động tự do">Lao động tự do</option>
-      <option value="Làm công ty hưởng lương">Làm công ty hưởng lương</option>
-      <option value="Tự doanh">Tự doanh</option>
-      <option value="Khác">Khác</option>
-    </select>
-  </div>
 
   <button class="btn">ĐĂNG KÝ TƯ VẤN</button>
 
@@ -627,6 +565,62 @@ product-title{
     </div>
   </div>
 </section>
+
+<!-- ===== THÔNG TIN SẢN PHẨM ===== -->
+<section class="product-info">
+  <div class="product-info-box">
+    <p class="product-title"><strong>Thông tin sản phẩm*:</strong></p>
+
+    <ul class="product-list">
+      <li>Gói vay từ <strong>20 – 100 triệu đồng</strong></li>
+      <li>Thời gian vay <strong>6 – 36 tháng</strong></li>
+      <li>Lãi suất phẳng (tham chiếu) <strong>35,4%/năm</strong></li>
+      <li>
+        Kết quả ước tính dựa trên lãi suất phẳng (tham chiếu)
+        <strong>16,44%/năm</strong>, có thể chênh lệch nhỏ so với thực tế
+      </li>
+    </ul>
+
+    <p class="product-example">
+      Ví dụ: Vay <strong>20.000.000đ</strong> trong <strong>18 tháng</strong>,
+      tổng số tiền thanh toán khoảng <strong>25.110.000đ</strong>
+      (đã bao gồm các loại phí, trừ phí bảo hiểm & phí chuyển tiền).
+    </p>
+
+    <p class="product-note">
+      TàiChínhHàNội không thu bất kỳ khoản phí nào cho đến khi khoản vay được giải ngân.
+    </p>
+
+    <p class="product-italic">
+      <em>
+        Quyết định phê duyệt thường trong vòng 1 giờ.
+        Với khoản vay lớn hơn, thời gian có thể lâu hơn nhưng thường hoàn tất
+        trong vòng 8 giờ làm việc.
+      </em>
+    </p>
+  </div>
+</section>
+<!-- ===== PARTNER SUPPORT ===== -->
+<section class="partner-support">
+  <div class="container">
+    <p class="partner-text">
+      Hỗ trợ hồ sơ tại hơn 10+ tổ chức tài chính lớn
+    </p>
+
+    <div class="partner-logos">
+      <img src="{% static 'img/partners/shbfinance.png' %}" alt="SHB Finance">
+      <img src="{% static 'img/partners/miraeasset.png' %}" alt="Mirae Asset Finance">
+      <img src="{% static 'img/partners/shinhanfinance.png' %}" alt="Shinhan Finance">
+    </div>
+
+    <p class="partner-note">
+      *Chúng tôi là chuyên viên hỗ trợ trực tiếp hoàn thiện và xử lý hồ sơ vay. 
+      Không phải là tổ chức tín dụng.
+    </p>
+  </div>
+</section>
+
+
 
 <section class="gray products">
 
