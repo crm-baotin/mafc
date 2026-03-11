@@ -361,6 +361,41 @@ product-title{
     box-shadow:0 0 0 0 rgba(243,112,33,0);
   }
 }
+<style>
+
+.service-cards{
+  margin-top:18px;
+  max-width:420px;
+}
+
+.service-card{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#ffffff;
+  padding:12px 14px;
+  border-radius:10px;
+  margin-bottom:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.25s;
+}
+
+.service-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.service-card .icon{
+  font-size:18px;
+}
+
+.service-card .title{
+  font-size:15px;
+  color:#1a3d7c;
+  font-weight:500;
+}
+
+</style>
 </style>
 </head>
 
@@ -380,17 +415,29 @@ product-title{
     <h1 class="hero-title">
       <span class="line-1">Vay trả góp 10 – 500 triệu</span><br>
       <span class="line-2">Gặp TRỰC TIẾP chuyên viên tại Hà Nội</span><br>
-      <span class="line-3">Hỗ trợ vay & thẻ tín dụng</span>
     </h1>
 
-    <p class="info-text">
-      <strong>Xử lý hồ sơ – KHÔNG MẤT PHÍ</strong><br>
+    <div class="service-cards">
 
-      <em>Hỗ trợ "NỢ XẤU" với khách hàng có hộ khẩu, sinh sống tại nội thành Hà Nội</em><br>
-    </p>
+      <div class="service-card">
+        <div class="icon">💳</div>
+        <div class="title">Hỗ trợ vay tiền mặt & thẻ tín dụng</div>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">📄</div>
+        <div class="title">Xử lý hồ sơ – KHÔNG THU PHÍ</div>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">⚠️</div>
+        <div class="title">Hỗ trợ NỢ XẤU khách hàng nội thành Hà Nội</div>
+      </div>
+
+    </div>
 
     <p class="cta-line">
-      Đăng ký để được sắp xếp lên hồ sơ với chuyên viên gần bạn nhất.
+      Đăng ký để được sắp xếp gặp chuyên viên gần bạn nhất.
     </p>
   </div>
 
