@@ -22,7 +22,6 @@ def submit(request):
         full_name = request.POST.get('full_name')
         phone = request.POST.get('phone')
         location = request.POST.get('location')
-        job = request.POST.get('job')
 
         # ===== CHỐNG SPAM SĐT (HQA) =====
         time_limit = timezone.now() - timedelta(hours=24)
@@ -47,7 +46,6 @@ def submit(request):
             full_name=full_name,
             phone=phone,
             location=location,
-            job=job,
         )
 
         # ===== GỬI TELE =====
@@ -55,15 +53,14 @@ def submit(request):
         now_time = timezone.localtime().strftime("%H:%M – %d/%m/%Y")
 
         msg = f"""
-📥 <b>LEAD MỚI – MAFC</b>
+📥 <b>LEAD MỚI – Bảo Tín</b>
 
 👤 Họ tên: {full_name}
 📞 SĐT: {phone}
 📍 Khu vực: {location}
-💼 Nghề nghiệp: {job}
 
 ⏰ Thời gian: {now_time}
-🌐 Nguồn: MAFC Landing
+🌐 Nguồn: Bảo Tín Landing
         """
 
         send_telegram(msg)
