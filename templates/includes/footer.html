@@ -357,5 +357,26 @@ document.querySelectorAll(".tab").forEach(btn => {
 </a>
 
 
+<script>
+(function () {
+  function detectDevTools() {
+    const threshold = 160;
+    if (window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold) {
+      document.body.innerHTML = "";
+    }
+  }
+  setInterval(detectDevTools, 1000);
+})();
+</script>
+
+<script>
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('paste', e => e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
+
+
 </body>
 </html>

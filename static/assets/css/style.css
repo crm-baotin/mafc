@@ -301,7 +301,7 @@ body {
 /* BỎ NỀN FULL */
 .menu {
   background: none;
-
+  top: 65px !important;
   margin-top: 0 !important
 }
 
@@ -962,14 +962,15 @@ body {
 
 /* SLIDER BANNER */
 .slider {
-  margin-top: 0 !important;
+  margin-top: -10 !important;
   position: relative;
   width: 100%;
   overflow: hidden;
+  min-height: 300px; /* QUAN TRỌNG */
 }
 
 .slider .slide {
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
