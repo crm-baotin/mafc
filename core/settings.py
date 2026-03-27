@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zx%jdq7@icb&e8o9vw0)+rkloa1j0r*68k$vwk@woed9(rmoxy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'taichinhhanoi.io.vn',
+    'www.taichinhhanoi.io.vn',
+    'mafc.onrender.com',
+]
 
 
 
@@ -108,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
@@ -129,3 +133,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://taichinhhanoi.io.vn',
+    'https://mafc.onrender.com',
+    'https://www.taichinhhanoi.io.vn'
+]
