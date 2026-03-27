@@ -962,15 +962,14 @@ body {
 
 /* SLIDER BANNER */
 .slider {
-  margin-top: -12 !important;
+  margin-top: 0 !important;
   position: relative;
   width: 100%;
   overflow: hidden;
-  min-height: 300px; /* QUAN TRỌNG */
 }
 
 .slider .slide {
-  position: relative;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -1974,6 +1973,7 @@ body {
     font-size: 13px;
     border-radius: 6px;
   }
+
 
 
   /* NOTE nhỏ lại */
