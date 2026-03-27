@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+
+<div class="container page-layout">
+
+  <!-- SIDEBAR -->
+{% include "includes/sidebar.html" %}
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- MOBILE MENU -->
+    {% include "includes/mobile-product.html" %}
+
+    <!-- TIÊU ĐỀ -->
+    <h1>VAY THEO ĐĂNG KÝ XE MÁY – Không giữ xe</h1>
+
+    <!-- MÔ TẢ -->
+    <p>
+      Bạn đang có xe máy chính chủ?  
+      Chỉ cần <b>đăng ký xe (cavet)</b>, bạn có thể vay nhanh <b>mà vẫn giữ xe sử dụng</b> bình thường.
+    </p>
+
+    <p style="color:#d60000; font-weight:600;">
+      👉 Làm hồ sơ trực tiếp F88 và các tổ chức hỗ trợ – duyệt nhanh, giải ngân trong ngày
+    </p>
+
+    <!-- CHÍNH SÁCH -->
+    <h3>Chính sách vay</h3>
+    <ul class="policy">
+      <li>Hạn mức vay từ 5 – 50 triệu</li>
+      <li>Không giữ xe – vẫn sử dụng bình thường</li>
+      <li>Duyệt nhanh trong 30 phút – 2h</li>
+      <li>Giải ngân trong ngày</li>
+      <li><b>Hỗ trợ nợ xấu (xét tùy trường hợp) – áp dụng khách hàng nội thành Hà Nội</b></li>
+    </ul>
+
+  <div class="tab-box">
+
+  <div class="tabs">
+    <button class="tab active" data-tab="dk">Điều kiện</button>
+    <button class="tab" data-tab="hs">Hồ sơ</button>
+    <button class="tab" data-tab="ut">Ước tính</button>
+  </div>
+
+  <div class="tab-body">
+
+    <!-- ĐIỀU KIỆN -->
+    <div class="tab-content active" id="dk">
+      <ul>
+        <li>✔ Độ tuổi từ 20 – 60</li>
+        <li>✔ Có CCCD gắn chip</li>
+        <li>✔ Có đăng ký xe máy chính chủ hoặc có thể chứng minh sử dụng</li>
+        <li>✔ Xe đang sử dụng bình thường</li>
+      </ul>
+    </div>
+
+    <!-- HỒ SƠ -->
+    <div class="tab-content" id="hs">
+      <ul>
+        <li>✔ CCCD gắn chip</li>
+        <li>✔ Đăng ký xe (cavet)</li>
+      </ul>
+
+      <p class="note">
+        👉 Không cần chứng minh thu nhập – thủ tục đơn giản
+      </p>
+    </div>
+
+    <!-- ƯỚC TÍNH -->
+    <div class="tab-content" id="ut">
+      <p>
+        Hạn mức vay từ <b>5 – 50 triệu</b>, thời gian vay linh hoạt.<br>
+        Lãi suất tham khảo từ <b>1.5%/tháng</b> (tùy hồ sơ).
+      </p>
+
+      <p><b>Ví dụ khoản vay:</b></p>
+
+      <p>
+        • Vay 10 triệu → góp khoảng <b>400 – 600k/tháng</b><br>
+        • Vay 30 triệu → góp khoảng <b>1 – 1.5 triệu/tháng</b><br>
+        • Vay 50 triệu → góp khoảng <b>1.7 – 2.5 triệu/tháng</b>
+      </p>
+
+      <p class="note">
+        👉 Số tiền góp phụ thuộc vào xe và hồ sơ khách hàng
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<p><b>👉 Đăng ký ngay – tư vấn miễn phí trong 1–2 giờ<br>
+👉 Hỗ trợ hồ sơ khó – gặp trực tiếp tại Hà Nội</b></p>
+
+  </main>
+
+</div>
+<!-- PRODUCTS -->
+ <div class="container">
+<section class="loan-section">
+
+    <div class="section-head">
+      <h2>CÁC SẢN PHẨM VAY</h2>
+    </div>
+
+    <!-- DÒNG 1: TÍN CHẤP (CÓ SLIDE) -->
+    <div class="slider-wrapper auto-slide">
+      <div class="slider-track">
+
+        <a href="/vay-theo-luong/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp1.jpg' %}">
+  </div>
+  <p>Vay tín chấp theo lương</p>
+</a>
+
+        <a href="/vay-theo-cccd/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp2.jpg' %}">
+  </div>
+  <p>Vay theo Căn cước công dân</p>
+</a>
+
+        <a href="/vay-theo-lich-su/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp3.jpg' %}">
+  </div>
+  <p>Vay theo Lịch sử tín dụng</p>
+</a>
+
+        <a href="/vay-ho-kinh-doanh/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp4.jpg' %}">
+  </div>
+  <p>Vay theo hộ tự kinh doanh</p>
+</a>
+
+        <a href="/vay-theo-xe/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp5.jpg' %}">
+  </div>
+  <p>Vay theo đăng ký xe máy</p>
+</a>
+
+        <a href="/vay-bao-hiem/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp6.jpg' %}">
+  </div>
+  <p>Vay theo hợp đồng bảo hiểm</p>
+</a>
+
+        <a href="/vay-mua-nha/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp7.jpg' %}">
+  </div>
+  <p>Vay mua trả góp Nhà</p>
+</a>
+
+        <a href="/vay-mua-oto/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp8.jpg' %}">
+  </div>
+  <p>Vay mua trả góp Ô tô</p>
+</a>
+
+        <a href="/vay-mua-xe-may/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp9.jpg' %}">
+  </div>
+  <p>Vay mua trả góp Xe máy</p>
+</a>
+
+        <a href="/vay-mua-dien-thoai/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp10.jpg' %}">
+  </div>
+  <p>Vay mua trả góp Điện thoại</p>
+</a>  
+
+        <a href="/the-tin-dung/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp11.jpg' %}">
+  </div>
+  <p>Thẻ tín dụng tiền mặt</p>
+</a>  
+
+      </div>
+    </div>
+
+    <!-- DÒNG 2: THẾ CHẤP + THẺ (KHÔNG SLIDE PC) -->
+    <div class="slider-wrapper no-slide">
+      <div class="slider-track">
+
+        <a href="/the-chap-nha/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp12.jpg' %}">
+  </div>
+  <p>Vay thế chấp Nhà</p>
+</a>
+
+        <a href="/the-chap-oto/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp13.jpg' %}">
+  </div>
+  <p>Vay thế chấp Ô tô</p>
+</a>
+
+        <a href="/the-chap-xe-may/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp14.jpg' %}">
+  </div>
+  <p>Vay thế chấp Xe máy</p>
+</a>
+
+        <a href="/the-ngan-hang/" class="loan-item">
+  <div class="loan-img">
+    <img src="{% static 'assets/images/sp15.jpg' %}">
+  </div>
+  <p>Thẻ ngân hàng</p>
+</a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}

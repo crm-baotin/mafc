@@ -1,0 +1,138 @@
+{% load static %}
+
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="container">
+    <div class="top-bar">
+
+      <!-- LOGO -->
+      <div class="logo">
+  <a href="/">
+    <img src="{% static 'assets/images/bank-logo.png' %}" alt="Logo">
+  </a>
+</div>
+<div class="mobile-menu-btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+      <!-- CENTER INFO -->
+      <div class="top-center">
+        <div class="info-item">
+          <img src="{% static 'assets/images/icon-vitri.png' %}">
+          <span>Gặp trực tiếp Chuyên viên tại Hà Nội</span>
+        </div>
+
+        <div class="info-item">
+          <img src="{% static 'assets/images/icon-lienhe.png' %}">
+          <span>0829133391</span>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="top-right">
+        <a href="#formDangKy" class="btn">ĐĂNG KÝ TƯ VẤN</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- MENU Mobile -->
+<div class="mobile-menu">
+
+  <a href="/">Trang chủ</a>
+
+  <!-- VAY TÍN CHẤP -->
+  <div class="m-dropdown">
+    <a href="#" class="m-btn">
+  Vay tín chấp <i class="fa fa-chevron-down"></i>
+</a>
+
+    <div class="m-submenu">
+      <a href="/vay-theo-luong/">Vay tín chấp theo lương</a>
+        <a href="/vay-theo-cccd/">Vay tín chấp theo CCCD định danh</a>
+        <a href="/vay-theo-lich-su/">Vay tín chấp theo lịch sử tín dụng</a>
+        <a href="/vay-bao-hiem/">Vay tín chấp theo Bảo hiểm nhân thọ</a>
+        <a href="/vay-ho-kinh-doanh/">Vay tín chấp theo hộ kinh doanh</a>
+        <a href="/vay-theo-xe/">Vay tín chấp theo đăng ký xe máy</a>
+        <a href="/vay-mua-dien-thoai/">Vay mua trả góp điện thoại</a>
+        <a href="/vay-mua-xe-may/">Vay mua trả góp  xe máy</a>
+        <a href="/vay-mua-oto/">Vay mua trả góp  ô tô</a>
+        <a href="/vay-mua-nha/">Vay mua trả góp  nhà</a>
+    </div>
+  </div>
+
+  <!-- VAY THẾ CHẤP -->
+  <div class="m-dropdown">
+    <a href="#" class="m-btn">
+  Vay thế chấp <i class="fa fa-chevron-down"></i>
+</a>
+
+    <div class="m-submenu">
+      <a href="/the-chap-nha/">Vay thế chấp nhà</a>
+        <a href="/the-chap-oto/">Vay thế chấp Ô tô</a>
+        <a href="/the-chap-xe-may/">Vay thế chấp xe máy</a>
+    </div>
+  </div>
+
+  <a href="/the-tin-dung/">Thẻ tín dụng</a>
+  <a href="/lien-he/">Liên hệ</a>
+
+</div>
+
+<!-- MENU -->
+<div class="menu">
+  <div class="container">
+
+    <!-- 1 -->
+    <a href="/">Trang chủ</a>
+
+    <!-- 2: VAY TÍN CHẤP -->
+    <div class="dropdown">
+      <a href="#" class="drop-btn">
+  Vay tín chấp <i class="fa fa-chevron-down"></i>
+</a>
+
+      <div class="submenu">
+        <a href="/vay-theo-luong/">Vay tín chấp theo lương</a>
+        <a href="/vay-theo-cccd/">Vay tín chấp theo CCCD định danh</a>
+        <a href="/vay-theo-lich-su/">Vay tín chấp theo lịch sử tín dụng</a>
+        <a href="/vay-bao-hiem/">Vay tín chấp theo Bảo hiểm nhân thọ</a>
+        <a href="/vay-ho-kinh-doanh/">Vay tín chấp theo hộ kinh doanh</a>
+        <a href="/vay-theo-xe/">Vay tín chấp theo đăng ký xe máy</a>
+        <a href="/vay-mua-dien-thoai/">Vay mua trả góp điện thoại</a>
+        <a href="/vay-mua-xe-may/">Vay mua trả góp  xe máy</a>
+        <a href="/vay-mua-oto/">Vay mua trả góp  ô tô</a>
+        <a href="/vay-mua-nha/">Vay mua trả góp  nhà</a>
+      </div>
+    </div>
+
+    <!-- 3: VAY THẾ CHẤP -->
+    <div class="dropdown">
+      <a href="#" class="drop-btn">
+  Vay thế chấp <i class="fa fa-chevron-down"></i>
+</a>
+
+      <div class="submenu">
+        <a href="/the-chap-nha/">Vay thế chấp nhà</a>
+        <a href="/the-chap-oto/">Vay thế chấp Ô tô</a>
+        <a href="/the-chap-xe-may/">Vay thế chấp xe máy</a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <a href="/the-tin-dung/">Thẻ tín dụng</a>
+
+    <!-- 5 -->
+    <a href="/lien-he/">Liên hệ</a>
+
+  </div>
+</div>
+
+<!-- SLIDER -->
+<section class="slider">
+    <img src="{% static 'assets/images/banner.jpg' %}" class="slide active">
+    <img src="{% static 'assets/images/banner1.jpg' %}" class="slide">
+</section>

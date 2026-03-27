@@ -1,15 +1,4 @@
 from django.shortcuts import render, redirect
-from .models import Lead
-from .telegram import send_telegram
-from django.utils import timezone
-
-
-
-def landing(request):
-    return render(request, 'leads/landing_mafc.html')
-
-
-from django.shortcuts import redirect
 from django.utils import timezone
 from datetime import timedelta
 from .models import Lead
@@ -23,7 +12,11 @@ def submit(request):
         phone = request.POST.get('phone')
         location = request.POST.get('location')
 
-        # ===== CHỐNG SPAM SĐT (HQA) =====
+        # ===== CHECK RỖNG =====
+        if not phone:
+            return redirect('/')
+
+        # ===== CHỐNG SPAM =====
         time_limit = timezone.now() - timedelta(hours=24)
 
         count = Lead.objects.filter(
@@ -32,7 +25,6 @@ def submit(request):
         ).count()
 
         if count >= 2:
-            # ❗ TRẢ VỀ LANDING + CẢNH BÁO
             return render(
                 request,
                 'leads/landing_mafc.html',
@@ -49,7 +41,6 @@ def submit(request):
         )
 
         # ===== GỬI TELE =====
-        from .telegram import send_telegram
         now_time = timezone.localtime().strftime("%H:%M – %d/%m/%Y")
 
         msg = f"""
@@ -60,18 +51,22 @@ def submit(request):
 📍 Khu vực: {location}
 
 ⏰ Thời gian: {now_time}
-🌐 Nguồn: Bảo Tín Landing
+🌐 Nguồn: Bảo Tín Finance
         """
 
-        send_telegram(msg)
+        try:
+            send_telegram(msg.strip())
+        except:
+            pass
 
         return redirect('/success/')
 
     return redirect('/')
 
 
+def home(request):
+    return render(request, 'pages/index.html')
 
 
-def success(request):
-    return render(request, 'leads/success.html')
-
+def page(request, slug):
+    return render(request, f'pages/{slug}.html')

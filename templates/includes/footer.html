@@ -1,0 +1,361 @@
+{% load static %}
+<section id="formDangKy" class="form-section">
+  <div class="container form-wrap">
+
+    <div class="form-left">
+
+      <h3 class="form-title">ĐĂNG KÝ TƯ VẤN</h3>
+
+      <p class="form-highlight">
+        Không phí – Gặp trực tiếp – Xử lý hồ sơ khó<br>
+        Hỗ trợ đến khi giải ngân
+      </p>
+
+      <form method="POST" action="/submit/">
+  {% csrf_token %}
+
+        <!-- HỌ TÊN -->
+        <input type="text" name="full_name" placeholder="Họ và tên" required>
+
+        <!-- SĐT -->
+        <input type="tel" name="phone" placeholder="Số điện thoại" required pattern="[0-9]{9,11}">
+
+        <!-- TỈNH -->
+        <select name="location" required>
+          <option value="Hà Nội" selected>Hà Nội</option>
+          <option>TP Hồ Chí Minh</option>
+          <option>Hải Phòng</option>
+          <option>Quảng Ninh</option>
+          <option>Bắc Ninh</option>
+          <option>Lạng Sơn</option>
+          <option>Hưng Yên</option>
+          <option>Thái Bình</option>
+          <option>Thái Nguyên</option>
+          <option>Đà Nẵng</option>
+          <option>Cần Thơ</option>
+          <option>An Giang</option>
+          <option>Bà Rịa - Vũng Tàu</option>
+          <option>Bắc Giang</option>
+          <option>Bắc Kạn</option>
+          <option>Bạc Liêu</option>
+          <option>Bến Tre</option>
+          <option>Bình Định</option>
+          <option>Bình Dương</option>
+          <option>Bình Phước</option>
+          <option>Bình Thuận</option>
+          <option>Cà Mau</option>
+          <option>Cao Bằng</option>
+          <option>Đắk Lắk</option>
+          <option>Đắk Nông</option>
+          <option>Điện Biên</option>
+          <option>Đồng Nai</option>
+          <option>Đồng Tháp</option>
+          <option>Gia Lai</option>
+          <option>Hà Giang</option>
+          <option>Hà Nam</option>
+          <option>Hà Tĩnh</option>
+          <option>Hải Dương</option>
+          <option>Hậu Giang</option>
+          <option>Hòa Bình</option>
+          <option>Khánh Hòa</option>
+          <option>Kiên Giang</option>
+          <option>Kon Tum</option>
+          <option>Lai Châu</option>
+          <option>Lâm Đồng</option>
+          <option>Lào Cai</option>
+          <option>Long An</option>
+          <option>Nam Định</option>
+          <option>Nghệ An</option>
+          <option>Ninh Bình</option>
+          <option>Ninh Thuận</option>
+          <option>Phú Thọ</option>
+          <option>Phú Yên</option>
+          <option>Quảng Bình</option>
+          <option>Quảng Nam</option>
+          <option>Quảng Ngãi</option>
+          <option>Quảng Trị</option>
+          <option>Sóc Trăng</option>
+          <option>Sơn La</option>
+          <option>Tây Ninh</option>
+          <option>Thanh Hóa</option>
+          <option>Thừa Thiên Huế</option>
+          <option>Tiền Giang</option>
+          <option>Trà Vinh</option>
+          <option>Tuyên Quang</option>
+          <option>Vĩnh Long</option>
+          <option>Vĩnh Phúc</option>
+          <option>Yên Bái</option>
+        </select>
+
+        <!-- BUTTON -->
+        <button type="submit">ĐĂNG KÝ</button>
+
+        <!-- CHECKBOX -->
+        <label class="form-agree">
+          Bằng việc bấm nút <b>"Đăng ký tư vấn"</b>, Tôi đồng ý nhận cuộc gọi tư vấn dịch vụ từ chuyên viên tài chính trong khung giờ 08h–20h.
+        </label>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-bottom">
+    
+    <p>© 2020 Tài Chính Hà Nội Company. All rights reserved Ha Noi, Viet Nam</p>
+
+    <div class="footer-icons">
+      <img src="{% static 'assets/images/visa.png' %}">
+      <img src="{% static 'assets/images/mastercard.png' %}">
+      <img src="{% static 'assets/images/napas.png' %}">
+      <img src="{% static 'assets/images/paypal.png' %}">
+      <img src="{% static 'assets/images/westonunion.png' %}">
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+const btn = document.querySelector('.mobile-menu-btn');
+const menu = document.querySelector('.mobile-menu');
+
+btn.addEventListener('click', function(e) {
+  e.stopPropagation();
+
+  menu.classList.toggle('active');
+  btn.classList.toggle('active');
+});
+
+// click trong menu → không đóng
+menu.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+// click ngoài → đóng
+document.addEventListener('click', function(e) {
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('active');
+    btn.classList.remove('active');
+  }
+});
+</script>
+
+
+<script>
+function fixMenuPosition() {
+  const header = document.querySelector('.header');
+  const menu = document.querySelector('.mobile-menu');
+
+  if (header && menu) {
+    const h = header.offsetHeight;
+    menu.style.top = h + 'px';
+  }
+}
+
+// chạy lần đầu
+fixMenuPosition();
+
+// chạy khi resize
+window.addEventListener('resize', fixMenuPosition);
+</script>
+
+
+<script>
+function fixLayout() {
+  const header = document.querySelector('.header');
+  const menu = document.querySelector('.menu');
+
+  let totalHeight = 0;
+
+  if (header) totalHeight += header.offsetHeight;
+
+  // 👉 chỉ cộng menu khi nó HIỆN (PC)
+  if (menu && window.innerWidth > 768) {
+    totalHeight += menu.offsetHeight;
+  }
+
+  document.body.style.paddingTop = totalHeight + 'px';
+}
+
+fixLayout();
+window.addEventListener('resize', fixLayout);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let slides = document.querySelectorAll('.slider .slide');
+  let index = 0;
+
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  }
+});
+</script>
+
+<script>
+document.querySelectorAll('.tab').forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // demo đơn giản (chưa đổi nội dung)
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.dropdown > a').forEach(btn => {
+
+    btn.addEventListener('click', function(e) {
+
+      e.preventDefault(); // chỉ chặn nút cha
+
+      const parent = this.parentElement;
+      const submenu = parent.querySelector('.submenu');
+
+      // đóng menu khác
+      document.querySelectorAll('.submenu').forEach(m => {
+        if (m !== submenu) m.classList.remove('active');
+      });
+
+      submenu.classList.toggle('active');
+      parent.classList.toggle('active');
+
+    });
+
+  });
+
+});
+document.addEventListener("click", function (e) {
+  const menu = document.querySelector('.menu');
+
+  if (!menu.contains(e.target)) {
+    // đóng tất cả submenu
+    document.querySelectorAll('.submenu').forEach(sub => {
+      sub.classList.remove('active');
+    });
+
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      drop.classList.remove('active');
+    });
+  }
+});
+</script>
+
+<script>
+document.querySelectorAll('.m-btn').forEach(btn => {
+
+  btn.addEventListener('click', function(e) {
+
+    e.preventDefault();
+
+    const parent = this.parentElement;
+    const submenu = this.nextElementSibling;
+
+    // đóng menu khác
+    document.querySelectorAll('.m-submenu').forEach(m => {
+      if (m !== submenu) {
+        m.style.height = 0;
+        m.parentElement.classList.remove('active');
+      }
+    });
+
+    // toggle
+    if (submenu.style.height && submenu.style.height !== "0px") {
+      submenu.style.height = 0;
+      parent.classList.remove('active');
+    } else {
+      submenu.style.height = submenu.scrollHeight + "px";
+      parent.classList.add('active');
+    }
+
+  });
+
+});
+</script>
+
+
+<script>
+document.querySelectorAll('.slider-wrapper.auto-slide').forEach(wrapper => {
+
+  const track = wrapper.querySelector('.slider-track');
+  let items = Array.from(wrapper.querySelectorAll('.loan-item'));
+
+  // clone để loop
+  items.forEach(item => {
+    track.appendChild(item.cloneNode(true));
+  });
+
+  let index = 0;
+
+  function getItemWidth() {
+    return items[0].getBoundingClientRect().width +
+           parseFloat(getComputedStyle(track).gap);
+  }
+
+  function slide() {
+    let itemWidth = getItemWidth();
+
+    index++;
+
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = `translate3d(-${index * itemWidth}px,0,0)`;
+
+    if (index >= items.length) {
+      track.style.transition = "none";
+      index = 0;
+      track.style.transform = `translate3d(0,0,0)`;
+    }
+  }
+
+  setInterval(slide, 3000);
+
+});
+</script>
+
+
+<script>
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    const id = btn.getAttribute("data-tab");
+    document.getElementById(id).classList.add("active");
+  });
+});
+</script>
+
+
+
+
+
+<a href="https://zalo.me/0829133391" class="zalo-fixed">
+  <img src="{% static 'assets/images/logozalo.png' %}">
+</a>
+
+<a href="tel:0829133391" class="call-fixed">
+  <img src="{% static 'assets/images/logocall.png' %}">
+</a>
+
+
+</body>
+</html>

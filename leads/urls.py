@@ -1,7 +1,10 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 from . import views
 
+
 urlpatterns = [
-    path('', views.landing_mafc, name='landing_mafc'),
-    path('success/', views.success, name='success'),
+    path('', views.home),
+    path('submit/', views.submit),
+    path('<slug:slug>/', views.page),
 ]

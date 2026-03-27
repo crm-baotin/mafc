@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="container page">
+
+  <div class="breadcrumb">
+    Trang chủ / Sản phẩm / <span><?= $title ?></span>
+  </div>
+
+  <div class="page-layout">
+
+    <!-- SIDEBAR -->
+    <?php include('../includes/sidebar'); ?>
+
+    <!-- CONTENT -->
+    <main class="content">
+    <div class="mobile-product">
+
+  <select onchange="if(this.value) window.location.href=this.value">
+
+    <option value="">-- Chọn sản phẩm --</option>
+
+    <!-- VAY TÍN CHẤP -->
+    <option value="/vay-theo-luong" <?= ($page=='luong')?'selected':'' ?>>Vay theo lương</option>
+    <option value="/vay-theo-cccd" <?= ($page=='cccd')?'selected':'' ?>>Vay theo CCCD</option>
+    <option value="/vay-theo-lich-su" <?= ($page=='lichsu')?'selected':'' ?>>Vay theo lịch sử tín dụng</option>
+    <option value="/vay-bao-hiem" <?= ($page=='baohiem')?'selected':'' ?>>Vay theo bảo hiểm</option>
+    <option value="/vay-ho-kinh-doanh" <?= ($page=='kinhdoanh')?'selected':'' ?>>Vay hộ kinh doanh</option>
+    <option value="/vay-theo-xe" <?= ($page=='xemay')?'selected':'' ?>>Vay theo xe máy</option>
+
+    <!-- TRẢ GÓP -->
+    <option value="/vay-mua-dien-thoai" <?= ($page=='dienthoai')?'selected':'' ?>>Vay mua điện thoại</option>
+    <option value="/vay-mua-xe-may" <?= ($page=='xemaytragop')?'selected':'' ?>>Vay mua xe máy</option>
+    <option value="/vay-mua-oto" <?= ($page=='ototragop')?'selected':'' ?>>Vay mua ô tô</option>
+    <option value="/vay-mua-nha" <?= ($page=='nhatragop')?'selected':'' ?>>Vay mua nhà</option>
+
+    <!-- THẾ CHẤP -->
+    <option value="/the-chap-nha" <?= ($page=='thechapnha')?'selected':'' ?>>Thế chấp nhà</option>
+    <option value="/the-chap-oto" <?= ($page=='thechapoto')?'selected':'' ?>>Thế chấp ô tô</option>
+    <option value="/the-chap-xe-may" <?= ($page=='thechapxemay')?'selected':'' ?>>Thế chấp xe máy</option>
+
+    <!-- THẺ -->
+    <option value="/the-ngan-hang" <?= ($page=='thenganhang')?'selected':'' ?>>Thẻ ngân hàng</option>
+    <option value="/the-tin-dung" <?= ($page=='thetindung')?'selected':'' ?>>Thẻ tín dụng</option>
+
+  </select>
+
+</div>
+      <h1><?= $title ?></h1>
+
+      <p class="desc"><?= $desc ?></p>
+
+      <h3>Chính sách vay</h3>
+      <ul class="policy">
+        <li>Vay tối đa 200 triệu</li>
+        <li>Không cần thế chấp</li>
+        <li>Duyệt nhanh 24h</li>
+      </ul>
+
+      <!-- TAB -->
+      <div class="tab-box">
+
+  <!-- TAB -->
+  <div class="tabs">
+    <button class="tab active" data-tab="dk">Điều kiện</button>
+    <button class="tab" data-tab="hs">Hồ sơ</button>
+    <button class="tab" data-tab="ut">Ước tính</button>
+  </div>
+
+
+  <!-- CONTENT -->
+  <div class="tab-body">
+
+    <div class="tab-content active" id="dk">
+      <ul>
+        <li>Có CMND/CCCD hợp lệ</li>
+        <li>Đang kinh doanh hoặc buôn bán</li>
+        <li>Có thu nhập ổn định</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="hs">
+      <ul>
+        <li>CMND/CCCD</li>
+        <li>Giấy tờ kinh doanh</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="ut">
+      Đang cập nhật...
+    </div>
+
+  </div>
+
+</div>
+
+    </main>
+
+  </div>
+
+</div>
+
+{% endblock %}
