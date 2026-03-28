@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('submit/', views.submit),
+        path('ping/', views.ping),
     path('<slug:slug>/', views.page),
-    path('ping/', views.ping),
 ]
