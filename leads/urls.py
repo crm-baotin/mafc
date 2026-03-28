@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.home),
     path('submit/', views.submit),
     path('<slug:slug>/', views.page),
+    path('ping/', views.ping),
 ]

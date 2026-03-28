@@ -70,3 +70,8 @@ def home(request):
 
 def page(request, slug):
     return render(request, f'pages/{slug}.html')
+
+from django.http import HttpResponse
+
+def ping(request):
+    return HttpResponse("ok")
