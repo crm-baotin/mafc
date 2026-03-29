@@ -107,20 +107,11 @@
 
 <!-- 🔥 TRACK LEAD -->
 <script>
-function fireLead() {
+window.addEventListener('load', function() {
   if (typeof fbq !== 'undefined') {
-    fbq('track', 'Lead', {
-      content_name: 'Dang ky vay',
-      value: 1,
-      currency: 'VND'
-    });
-    console.log("🔥 Lead fired");
-  } else {
-    setTimeout(fireLead, 300);
+    fbq('track', 'Lead');
   }
-}
-
-fireLead();
+});
 </script>
 
 {% endblock %}
