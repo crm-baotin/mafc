@@ -107,11 +107,15 @@
 
 <!-- 🔥 TRACK LEAD -->
 <script>
-fbq('track', 'Lead', {
-  content_name: 'Dang ky vay',
-  value: 1,
-  currency: 'VND'
-});
+setTimeout(function() {
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead', {
+      content_name: 'Dang ky vay',
+      value: 1,
+      currency: 'VND'
+    });
+  }
+}, 1000);
 </script>
 
 {% endblock %}
