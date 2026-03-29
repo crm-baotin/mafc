@@ -56,13 +56,11 @@ class LeadAdmin(admin.ModelAdmin):
         'full_name',
         'phone',
         'location',
-        'job',
         'created_at',
     )
 
     list_filter = (
         'location',
-        'job',
         'created_at',
     )
 
