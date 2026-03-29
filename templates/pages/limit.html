@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+.form-section {
+  display: none !important;
+}
+</style>
+
+<section style="padding: 60px 20px; background:#f5f7fa;">
+  <div class="container">
+
+    <div style="
+      max-width: 520px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 14px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    ">
+
+      <!-- 🔥 ẢNH -->
+      <img src="{% static 'assets/images/vaythanhcong.png' %}" 
+           style="width:120px; margin-bottom:15px;">
+
+      <!-- TITLE -->
+      <h2 style="color:#1E3A5F; margin-bottom:10px;">
+        🎉 Bạn đã gửi yêu cầu gần đây !
+      </h2>
+
+      <!-- SUB -->
+      <p style="font-size:15px; color:#555; margin-bottom:20px;">
+        Thông tin của bạn đã được tiếp nhận.<br>
+        Chuyên viên sẽ liên hệ trong <b>15–30 phút</b>.
+      </p>
+
+      <!-- 🔥 HIGHLIGHT -->
+      <div style="
+  background:#f1f5f9;
+  padding:15px 18px;
+  border-radius:10px;
+  font-size:14px;
+  margin-bottom:20px;
+  text-align:left;
+  color:#e53935;   /* 🔥 CHỮ ĐỎ */
+">
+
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span>✔️</span>
+    <span>Tư vấn miễn phí 100%</span>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span>✔️</span>
+    <span>Hỗ trợ hồ sơ khó, nợ xấu</span>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <span>✔️</span>
+    <span>Gặp trực tiếp tại Hà Nội</span>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:8px;">
+    <span>✔️</span>
+    <span>Không thu phí</span>
+  </div>
+
+</div>
+
+      <!-- ⚡ CTA -->
+      <p style="font-size:14px; margin-bottom:10px;">
+        📞 Nếu bạn cần gấp? <br>  Gọi ngay hoặc liên hệ Zalo
+      </p>
+
+      <a href="tel:0829133391" style="
+        display:inline-block;
+        margin-bottom:20px;
+        font-size:18px;
+        font-weight:bold;
+        color:#e53935;
+        text-decoration:none;
+      ">
+        0829 133 391
+      </a>
+
+      <!-- BUTTON -->
+      <br>
+      <a href="/" style="
+        display:inline-block;
+        padding:10px 22px;
+        background:#1E3A5F;
+        color:#fff;
+        border-radius:999px;
+        text-decoration:none;
+        font-weight:600;
+      ">
+        Quay lại trang chủ
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 🔥 TRACK LEAD -->
+<script>
+window.addEventListener('load', function() {
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead');
+  }
+});
+</script>
+
+{% endblock %}

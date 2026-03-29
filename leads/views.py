@@ -25,13 +25,8 @@ def submit(request):
         ).count()
 
         if count >= 2:
-            return render(
-                request,
-                'leads/landing_mafc.html',
-                {
-                    'spam_warning': 'Số điện thoại này đã gửi yêu cầu nhiều lần trong hôm nay. Vui lòng chờ hoặc liên hệ trực tiếp để được hỗ trợ.'
-                }
-            )
+             return redirect('/limit/')
+
 
         # ===== LƯU LEAD =====
         Lead.objects.create(
@@ -63,7 +58,9 @@ def submit(request):
 
     return redirect('/')
 
-
+def limit(request):
+    return render(request, 'pages/limit.html')
+    
 def home(request):
     return render(request, 'pages/index.html')
 
