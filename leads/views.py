@@ -75,3 +75,6 @@ from django.http import HttpResponse
 
 def ping(request):
     return HttpResponse("ok")
+
+def success(request):
+    return render(request, 'pages/success.html')

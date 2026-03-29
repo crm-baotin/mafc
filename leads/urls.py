@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('submit/', views.submit),
-        path('ping/', views.ping),
+    path('success/', views.success),  # thêm dòng này    
+    path('ping/', views.ping),
     path('<slug:slug>/', views.page),
 ]
