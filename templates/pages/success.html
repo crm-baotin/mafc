@@ -107,9 +107,16 @@
 
 <!-- 🔥 TRACK LEAD -->
 <script>
-setTimeout(function() {
-  fbq('track', 'Lead');
-}, 500);
+window.addEventListener('load', function() {
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead', {
+      content_name: 'Dang ky vay',
+      value: 1,
+      currency: 'VND',
+      content_category: 'Vay tin chap'
+    });
+  }
+});
 </script>
 
 {% endblock %}
