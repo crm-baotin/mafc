@@ -107,12 +107,13 @@
 
 <!-- 🔥 TRACK LEAD -->
 <script>
-if (typeof fbq !== 'undefined') {
+if (!sessionStorage.getItem('lead_tracked')) {
   fbq('track', 'Lead', {
     content_name: 'Dang ky vay',
     value: 1,
     currency: 'VND'
   });
+  sessionStorage.setItem('lead_tracked', 'true');
 }
 </script>
 
