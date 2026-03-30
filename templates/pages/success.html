@@ -107,14 +107,16 @@
 
 <!-- 🔥 TRACK LEAD -->
 <script>
-if (!sessionStorage.getItem('lead_tracked')) {
-  fbq('track', 'Lead', {
-    content_name: 'Dang ky vay',
-    value: 1,
-    currency: 'VND'
-  });
-  sessionStorage.setItem('lead_tracked', 'true');
-}
+<script>
+window.addEventListener('load', function () {
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Lead', {
+      content_name: 'Dang ky vay',
+      value: 1,
+      currency: 'VND'
+    });
+  }
+});
 </script>
 
 {% endblock %}
